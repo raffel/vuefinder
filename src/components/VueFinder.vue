@@ -2,9 +2,7 @@
   <div class="vuefinder">
     <div :class="darkMode ? 'dark': ''">
       <div
-          :class="fullScreen ? 'fixed w-screen inset-0 z-20' : 'relative rounded-md'"
-          :style="!fullScreen ? 'max-height: ' + maxHeight : ''"
-          class="border flex flex-col bg-white dark:bg-gray-800 text-gray-700 dark:text-neutral-400 border-neutral-300 dark:border-gray-900 min-w-min select-none"
+          class="fixed w-screen inset-0 z-20 border flex flex-col bg-white dark:bg-gray-800 text-gray-700 dark:text-neutral-400 border-neutral-300 dark:border-gray-900 min-w-min select-none"
           @mousedown="emitter.emit('vf-contextmenu-hide')" @touchstart="emitter.emit('vf-contextmenu-hide')">
         <v-f-toolbar :data="fetchData" />
         <v-f-breadcrumb :data="fetchData"/>
